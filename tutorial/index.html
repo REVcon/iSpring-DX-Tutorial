@@ -30,6 +30,33 @@
         <img src="images/presentation-folder-content.png" alt="Presentation folder content"/>
 
 
-
+        <h1>Шаг 3. Встраиваем презентацию в страницу</h1>
+        <p>
+            При помощи тэга iframe встраиваем презентацию внутри страницы.
+            В HTML-стилях задаем ширину и высоту фрейма презентации, а также наличие рамки.
+        </p>
+        <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;meta charset=&quot;utf-8&quot;&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,maximum-scale=1&quot;/&gt;
+                    &lt;title&gt;Your web page title&lt;/title&gt;
+                    <strong>&lt;style&gt;
+                        #presentation {
+                            width: 864px;
+                            height: 540px;
+                            border: 1px solid #000;
+                            }
+                    &lt;/style&gt;</strong>
+                &lt;/head&gt;
+                &lt;body&gt;
+                    <strong>&lt;iframe id=&quot;presentation&quot; src=&quot;presentation/index.html&quot;&gt;&lt;/iframe&gt;</strong>
+                &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+        <p>
+            В результате презентация будет встроена внутрь указанного фрейма
+        </p>
     </body>
 </html>
