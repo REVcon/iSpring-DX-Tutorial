@@ -1,8 +1,8 @@
-git merge master
+git merge step02
 if ERRORLEVEL 1 goto err
 git merge step01
 if ERRORLEVEL 1 goto err
-git merge step02
+git merge master
 if ERRORLEVEL 1 goto err
 
 
