@@ -76,6 +76,49 @@
         <p>
             В результате презентация будет встроена внутрь указанного фрейма
         </p>
+        <h1>Шаг 4. Подключаемся к плееру презентации</h1>
+        <p>
+            Добавляем новый элемент - текстовое поле, которое будет отображать текущее состояние презентации.
+            При помощи тэга script добавляем для страницы сценарий, в котором подключаемся к плееру и изменяем текст, в добавленном поле, при начале проигрывания презентации.
+            В HTML-стилях задаем шрифт и расположение добвленного текстового поля.
+        </p>
+        <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;meta charset=&quot;utf-8&quot;&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,maximum-scale=1&quot;/&gt;
+                    &lt;title&gt;Your web page title&lt;/title&gt;
+                    &lt;style&gt;
+                        #presentation {
+                            width: 864px;
+                            height: 540px;
+                            border: 1px solid #000;
+                            }
+                        <strong>
+                          #state {
+                              float:left;
+                              font: 18px 'Arial', sans-serif;
+                              margin-left: 50px;
+                          }
+                        </strong>
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;iframe id=&quot;presentation&quot; src=&quot;presentation/index.html&quot;&gt;&lt;/iframe&gt;
+                    <strong>&lt;p id=&quot;state&quot;&gt;Presentation is not running&lt;&gt;
+                    &lt;script&gt;
+                        var state = document.getElementById(&quot;state&quot;);
+                        var ispringPresentationConnector = {};
+
+                        ispringPresentationConnector.register = function(player)
+                        {
+                            state.innerHTML = &quot;Presentation is running&quot;;
+                        };
+                    &lt;/script&gt;</strong>
+                &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
 
 
 

@@ -1,3 +1,5 @@
+git merge step04
+if ERRORLEVEL 1 goto err
 git merge step03
 if ERRORLEVEL 1 goto err
 git merge step02

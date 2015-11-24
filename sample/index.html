@@ -6,13 +6,29 @@
         <title>Your web page title</title>
         <style>
             #presentation {
+                float: left;
                 width: 864px;
                 height: 540px;
                 border: 1px solid #000;
                 }
+            #state {
+              float:left;
+              font: 18px 'Arial', sans-serif;
+              margin-left: 50px;
+            }
         </style>
     </head>
     <body>
         <iframe id="presentation" src="presentation/index.html"></iframe>
+        <p id="state">Presentation is not running</p>
+        <script>
+            var state = document.getElementById("state");
+            var ispringPresentationConnector = {};
+
+            ispringPresentationConnector.register = function(player)
+            {
+                state.innerHTML = "Presentation is running";
+            };
+        </script>
     </body>
 </html>
